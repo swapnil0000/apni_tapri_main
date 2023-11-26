@@ -35,10 +35,9 @@ const Home = () => {
   };
 
   return (
-    <Container sx={{display:'flex',flexDirection:'row', gap:'10px'}}>
-
-    
+    <Container sx={{display:'flex',flexDirection:'row'}}>
     <Container maxWidth={'md'}>
+
         <Carousel sx={{
           width: { xs :330 - 600 , sm : 600-700 , md:700- 830 , lg:870}, 
           marginLeft: '0px', 
@@ -84,11 +83,11 @@ const Home = () => {
           </Box>
         </Box>
     
-        <Container width={910}>
+        <Container width={'md'}>
         <Box
           sx={{
             display: 'flex',
-            px: { xs: 0, md: 2 },
+            px: { xs: 0, md: 3 },
             alignItems: 'center',
             mt: 2,
             mb: 2,
@@ -98,31 +97,17 @@ const Home = () => {
             value={value}
             onChange={handleChange}
             variant="scrollable"
-            scrollButtons 
-            sx={{
-              [`& .${tabsClasses.scrollButtons}`]: {
-                '&.Mui-disabled': { opacity: 0.3 },
-              },
-            }}
+            // scrollButtons 
+            // sx={{
+            //   [`& .${tabsClasses.scrollButtons}`]: {
+            //     '&.Mui-disabled': { opacity: 0.3 },
+            //   },
+            // }}
           >
             {option.map((tab) => {
-              return <Tab sx={{display:'flex', flexDirection:'row', gap:.5,fontWeight:400 }}key={tab.id} icon={tab.icon} label={tab.value.toLowerCase()} />;
+              return <Tab  toLowerCase={true} sx={{textTransform:'none', display:'flex', flexDirection:'row', gap:2.5,fontWeight:600 }}key={tab.id} icon={tab.icon} label={tab.value} />;
             })}
           </Tabs>
-          <Button
-            sx={{
-              display: { xs: 'none', md: 'block' },
-              border: '1px solid #ddd',
-              minWidth: 90,
-              justifyContent: 'space-between',
-              borderRadius: 2,
-              textTransform: 'capitalize',
-              py: 1,
-              color: 'theme.palette.primary.main',
-            }}
-          >
-            <SortIcon /> Filters
-          </Button>
         </Box>
          
         <Box sx={{display:'flex',flexDirection:'row',alignItems:'center',}}>

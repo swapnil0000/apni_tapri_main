@@ -25,7 +25,7 @@ const RightSide = () => {
         marginLeft:'5px',
         fontWeight:400
     })
-    const StackStyle =styled('stack')({
+    const ButtonStyle =styled('Button')({
         display:'flex',
         flexDirection:'row',
         alignItems:'center',
@@ -33,10 +33,10 @@ const RightSide = () => {
         height:'30px',
         marginTop:'10px',
         backgroundColor:theme.palette.secondary.main,
-        color:'grey',
         borderRadius:'10px' , 
         gap:1,
         fontWeight:400,
+        border:'none'
     })
 
     const Image=styled('img')({
@@ -56,20 +56,20 @@ const RightSide = () => {
       </TypographyStyle>
       </Boxstyle>
       <Box sx={{display:'flex', flexDirection:'row',gap:1.5}}>
-        <StackStyle >
+        <ButtonStyle>
          <DeliveryDiningIcon/>
          <Typography>Delivery</Typography>
-        </StackStyle>
+        </ButtonStyle>
 
-        <StackStyle >
+        <ButtonStyle >
         <DeliveryDiningIcon/>
         <Typography>Delivery</Typography>
-       </StackStyle>
+       </ButtonStyle>
 
-       <StackStyle >
+       <ButtonStyle >
        <DiningIcon/>
        <Typography>Dining</Typography>
-      </StackStyle>
+      </ButtonStyle>
       </Box>
 
       <Box>
@@ -84,7 +84,7 @@ const RightSide = () => {
        </Box>
       </Box>
 
-      <Box sx={{width:'125px',marginLeft:'5px', height:'30px',marginTop:'20px',backgroundColor:'white',color:theme.palette.primary.main,border:'1px solid orange',borderRadius:'10px',display:"flex",alignItems:'center',justifyContent:'center'}}>
+      <Box sx={{width:'125px',marginLeft:'5px', height:'30px',marginTop:'20px',backgroundColor:'white',color:theme.palette.primary.main,border:'1px solid orange',borderRadius:'10px',display:"flex",alignItems:'center',justifyContent:'center',justifyContent:'space-between'}}>
        <Typography sx={{fontSize:'20px',fontWeight:600}}>Items Added</Typography>
       </Box>
 
@@ -92,9 +92,11 @@ const RightSide = () => {
        <Box sx={{display:'flex',flexDirection:'row',gap:2}} >
          <Veg src={veg} alt='veg'/>
          <Typography sx={{width:'150px',fontFamily:'sans-serif',fontWeight:600,marginTop:'10px'}}>Dal Makhani Meal</Typography> 
-       <Box sx={{display:'flex',flexDirection:'row',backgroundColor:'white',gap:1,border:'1px solid orange',width:'80px',height:'20px',marginTop:'12px',alignItems:'center',borderRadius:'5px'}}>
+       <Box sx={{display:'flex',flexDirection:'row',backgroundColor:'white',gap:.1,border:'1px solid orange',width:'80px',height:'20px',marginTop:'12px',alignItems:'center',borderRadius:'5px',justifyContent:'space-between'}}>
         <AddIcon/>
+        <Divider orientation='vertical'/>
         <span>0</span>
+        <Divider orientation='vertical'/>
         <RemoveIcon/>
        </Box>
        </Box>
@@ -111,9 +113,11 @@ const RightSide = () => {
       <Box sx={{display:'flex',flexDirection:'row',gap:2}} >
         <Veg src={veg} alt='veg'/>
         <Typography sx={{width:'150px',fontFamily:'sans-serif',fontWeight:600,marginTop:'10px'}}>Dal Makhani Meal</Typography> 
-      <Box sx={{display:'flex',flexDirection:'row',backgroundColor:'white',gap:1,border:'1px solid orange',width:'80px',height:'20px',marginTop:'12px',alignItems:'center',borderRadius:'5px'}}>
+      <Box sx={{display:'flex',flexDirection:'row',backgroundColor:'white',gap:.1,border:'1px solid orange',width:'80px',height:'20px',marginTop:'12px',alignItems:'center',borderRadius:'5px',justifyContent:'space-between'}}>
        <AddIcon/>
+       <Divider orientation='vertical'/>
        <span>0</span>
+       <Divider orientation='vertical'/>
        <RemoveIcon/>
       </Box>
       </Box>
@@ -130,9 +134,11 @@ const RightSide = () => {
      <Box sx={{display:'flex',flexDirection:'row',gap:2}} >
        <Veg src={veg} alt='veg'/>
        <Typography sx={{width:'150px',fontFamily:'sans-serif',fontWeight:600,marginTop:'10px'}}>Dal Makhani Meal</Typography> 
-     <Box sx={{display:'flex',flexDirection:'row',backgroundColor:'white',gap:1,border:'1px solid orange',width:'80px',height:'20px',marginTop:'12px',alignItems:'center',borderRadius:'5px'}}>
+     <Box sx={{display:'flex',flexDirection:'row',backgroundColor:'white',gap:.1,border:'1px solid orange',width:'80px',height:'20px',marginTop:'12px',alignItems:'center',borderRadius:'5px',justifyContent:"space-between"}}>
       <AddIcon/>
+      <Divider orientation='vertical'/>
       <span>0</span>
+      <Divider orientation='vertical'/>
       <RemoveIcon/>
      </Box>
      </Box>

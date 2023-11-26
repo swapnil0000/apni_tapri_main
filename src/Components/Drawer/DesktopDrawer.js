@@ -81,7 +81,7 @@ const Drawers = () => {
     const handleDrawerClose = () => {
         setOpen(!open);
     };
-    const [color,setColor]=useState(theme.palette.neutral.main)
+    const [color,setColor]=useState("black")
 
     const handleColour=()=>{
         const orange=theme.palette.primary.main;
@@ -93,7 +93,7 @@ const Drawers = () => {
             <Box display="flex" flexDirection="row" >
                 <IconButton
                     onClick={handleDrawerClose}
-                    color={color}
+                    color='black'
                     disablePadding
                     disableRipple
                     sx={{
@@ -109,8 +109,8 @@ const Drawers = () => {
             </Box>
             <List>
                 {draw.map((ele) => (
-                    <Link style={{ textDecoration: 'none' }} to={ele.path} >
-                        <ListItem key={ele.id} disablePadding sx={{ display: 'block' }}>
+                    <Link style={{ textDecoration: 'none' ,color:'black' , fontFamily:'Lato' }} to={ele.path} >
+                        <ListItem key={ele.id} disablePadding sx={{ display: 'block',fontFamily:'Lato' }}>
                             <ListItemButton
                                 sx={{
                                     minHeight: 48,
@@ -123,14 +123,13 @@ const Drawers = () => {
                                         minWidth: 0,
                                         mr: open ? 3 : 'auto',
                                         justifyContent: 'center',
-                                        color:{color}
                                         
                                     }}
                                     onClick={handleColour}
                                 >
                                     {ele.value}
                                 </ListItemIcon>
-                                <ListItemText primary={ele.name} sx={{ opacity: open ? 1 : 0 }} />
+                                <ListItemText  primary={ele.name} sx={{ opacity: open ? 1 : 0 }} />
                             </ListItemButton>
                         </ListItem>
                     </Link>

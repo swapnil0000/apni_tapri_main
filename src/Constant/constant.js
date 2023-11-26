@@ -59,19 +59,19 @@ export const draw=[
       value:<DiningIcon/>,
       id:'2',
       path:'/meal',
-      name:'Meal'
+      name:'Ofline Dining'
     },
     { 
       value:<ListIcon/>,
       id:'2',
       path:'/menu',
-      name:'Menu'
+      name:'Our Menu'
     },
     {
       value:<ChatIcon/> , 
       id:'3',
       path:'/chat',
-      name:'Chat'
+      name:'Contact'
     },
     {
       value:<InfoIcon/>,
@@ -79,12 +79,6 @@ export const draw=[
       path:'/about',
       name:'About'
     },
-    {
-      value:<HelpIcon/>,
-      id:'5',
-      path:'/help',
-      name:'Help'
-    }
     ]
 
     export const carouselimage=[

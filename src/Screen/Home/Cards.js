@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { orderData } from '../../Constant/constant'
 import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from '@mui/material'
-import Dialogs from './Dialogs';
-
+import Dialogs from './Dialogs/Dialogs'
+import "../../animation/animation.css"
 
 
 
@@ -37,25 +37,26 @@ const handleClose = () => {
               <CardContent>
           <Box  variant="h5" component="div" sx={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}>
             <img style={{width:'18px', height:'18px'}} src={ele.veg} alt='grenn'/>
-            <Typography sx={{fontSize:'20px',fontFamily:'Lato'}}>{ele.name}</Typography>
+            <Typography sx={{fontSize:'20px',fontFamily:'sans-serif'}}>{ele.name}</Typography>
             <Typography>{ele.price}</Typography>
           </Box>
-         <Box sx={{marginLeft:'100px',marginTop:'10px'}}>
-          <Button variant='outlined' onClick={handeOpen}>
-           Add
+         <Box sx={{marginTop:'10px'}}>
+          <Button  className='btn' variant='outlined'  onClick={handeOpen}>
+           Add 
           </Button>
          </Box>
         </CardContent>
             </CardActionArea>
+            <Box>
+            <Dialogs id={ele.id} image={ele.img} name={ele.name} price={ele.price}   open={open} handleClose={handleClose}/>
+            </Box>
           </Card>
-            
+         
             </Grid>
+            
              ))
         }
             </Grid>
-            <Box>
-            <Dialogs open={open} handleClose={handleClose}/>
-            </Box>
             </Box>
   )
 }

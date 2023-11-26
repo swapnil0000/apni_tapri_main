@@ -1,4 +1,24 @@
 # Getting Started with Create React App
+# ApniTapri🍕
+
+Welcome to ApniTapri – your go-to repository for a modern food delivery platform inspired by the success of Tapri. 🚀
+
+## Features
+- 📦 Browse through a diverse menu of delicious dishes
+- 🛒 Add items to your cart and place orders seamlessly
+- 📍 Track the real-time status of your delivery
+- 💳 Secure payment options for a hassle-free checkout
+
+## Technologies Used
+-  Material ui version - 5 
+-  React for a dynamic and responsive frontend
+
+## Getting Started
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Run the app with `npm start`
+
+Feel free to contribute, report issues, or submit feature requests. Let's build the future of food delivery together! 🍔🚗
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

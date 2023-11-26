@@ -1,0 +1,25 @@
+.btn{
+
+    transition: all 1s;
+    background-color: #fff;
+    width: auto;
+    height: 27px;
+}
+
+.btn:hover{
+    transform: translateX(10px),translateY(10px) ;
+    background-color:hsl(34, 83%, 58%);
+    height: 32px;
+}
+@keyframes sideInLeft {
+    from{
+        transform: translateX(-300px);
+        
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.dialog{
+    animation: sideInLeft 1s;
+}
