@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { orderData } from '../../Constant/constant'
+import { orderData } from '../../../Constant/constant'
 import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from '@mui/material'
-import Dialogs from './Dialogs/Dialogs'
-import "../../animation/animation.css"
+import Dialogs from '../Dialogs/Dialogs'
+import "../../../animation/animation.css"
 
 
 

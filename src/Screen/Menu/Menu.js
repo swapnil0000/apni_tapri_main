@@ -1,8 +1,13 @@
+import { Box, Container } from '@mui/material'
 import React from 'react'
 
 const Menu = () => {
   return (
-    <div>Menu</div>
+   <Container>
+    <Box>
+     Menu
+    </Box>
+   </Container>
   )
 }
 

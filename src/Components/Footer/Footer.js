@@ -13,6 +13,7 @@ export default function Footer(){
     <Box 
     sx={{
       position:"absolute",
+      marginTop:'200px',
       backgroundColor:theme.palette.neutral.main,
       color: "black",
       p: { xs: 4, md: 10 },

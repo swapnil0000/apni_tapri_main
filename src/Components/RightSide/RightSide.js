@@ -8,6 +8,7 @@ import map from "../../Components/RightSide/Map.png"
 import veg from "../../Components/RightSide/veg.png"
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import { Link, Outlet } from 'react-router-dom';
 const RightSide = () => {
     const Boxstyle=styled('Box')({
         width: '240px',
@@ -56,20 +57,25 @@ const RightSide = () => {
       </TypographyStyle>
       </Boxstyle>
       <Box sx={{display:'flex', flexDirection:'row',gap:1.5}}>
+      <Link style={{textDecoration:'none'}} to='/delivery'>
         <ButtonStyle>
          <DeliveryDiningIcon/>
          <Typography>Delivery</Typography>
         </ButtonStyle>
-
+        </Link>
+       <Link style={{textDecoration:'none'}} to='/dining'>
         <ButtonStyle >
         <DeliveryDiningIcon/>
-        <Typography>Delivery</Typography>
+        <Typography>Dining</Typography>
        </ButtonStyle>
-
+       </Link>
+    
+       <Link style={{textDecoration:'none'}} to='/delivery'>
        <ButtonStyle >
        <DiningIcon/>
        <Typography>Dining</Typography>
       </ButtonStyle>
+      </Link>
       </Box>
 
       <Box>
@@ -148,6 +154,7 @@ const RightSide = () => {
       <Typography sx={{fontWeight:'bold'}}> $ 220 </Typography>
      </Box>
     </Box>
+    <Outlet/>
      </Box>
 
      

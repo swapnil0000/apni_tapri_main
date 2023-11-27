@@ -7,7 +7,8 @@ export const theme=createTheme({
     typography:{
         allVariants:{
             fontFamily:'Raleway',
-            fontSize:15
+            fontSize:15,
+            translate:'toLowerCase'
         }
     },
     palette:{

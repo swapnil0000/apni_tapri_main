@@ -41,10 +41,11 @@ import chinese from "../assets/Image/MenuImage/chinese.jpg"
 
 // ORDER DATA
 
-import order1 from "../assets/Image/OrderImage/order1.png" 
-import order2 from "../assets/Image/OrderImage/order2.png" 
-import order3 from "../assets/Image/OrderImage/order3.png" 
-import order4 from "../assets/Image/OrderImage/order4.png" 
+import order1 from "../assets/Image/OrderImage/order1.jpeg"
+import order2 from "../assets/Image/OrderImage/order2.jpeg"
+import order3 from "../assets/Image/OrderImage/order3.jpeg"
+import order4 from "../assets/Image/OrderImage/order4.webp"
+
 import veg from "../Components/RightSide/veg.png"
 
 
@@ -66,12 +67,6 @@ export const draw=[
       id:'2',
       path:'/menu',
       name:'Our Menu'
-    },
-    {
-      value:<ChatIcon/> , 
-      id:'3',
-      path:'/chat',
-      name:'Contact'
     },
     {
       value:<InfoIcon/>,
@@ -211,20 +206,29 @@ export const draw=[
     },
     {
       id:5,
-      img:order4,
-      veg:veg,     
+      veg:veg,
+      img:order1,
       name:'Burger',
       price:'$ 10'
     },
     {
       id:6,
-      img:order4,
-      veg:veg,     
+      img:order2,
+      veg:veg,
       name:'Burger',
       price:'$ 10'
+
     },
     {
       id:7,
+      img:order3,
+      veg:veg,
+      name:'Burger',
+      price:'$ 10'
+
+    },
+    {
+      id:8,
       img:order4,
       veg:veg,     
       name:'Burger',

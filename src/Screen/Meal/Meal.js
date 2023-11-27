@@ -1,8 +1,11 @@
+import { Container } from '@mui/material'
 import React from 'react'
 
 const Meal = () => {
   return (
-    <div>Meal</div>
+   <Container maxWidth='lg'>
+    MEal
+   </Container>
   )
 }
 

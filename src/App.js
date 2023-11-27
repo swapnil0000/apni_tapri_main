@@ -3,11 +3,13 @@ import Home from "./Screen/Home/Home";
 import About from "./Screen/About/About";
 import Menu from "./Screen/Menu/Menu";
 import Meal from "./Screen/Meal/Meal";
-import Help from "./Screen/Help/Help";
 import Location from "./Screen/Location/Location";
 import Drawer from "./Components/Drawer";
 import Header from "./Components/Header/index"
 import Footer from "./Components/Footer/Footer";
+import Delivery from "./Screen/Delivery/Delivery";
+import Dining from "./Screen/Dining/Dining";
+import Pickup from "./Screen/Pickup/Pickup";
 function App() {
 
   return (
@@ -18,8 +20,10 @@ function App() {
       <Route path="/about" element={<About/>}/>
       <Route path="/menu" element={<Menu/>}/>
       <Route path="/meal" element={<Meal/>}/>
-      <Route path="/help" element={<Help/>}/>
       <Route path={"/location" } element={<Location/>}/>
+      <Route path={"/delivery"} element={<Delivery/>}/>
+      <Route path={"/dining"} element={<Dining/>}/>
+      <Route path={"/pickup"} element={<Pickup/>}/>
      </Routes>
      <Drawer/>
      <Footer/>

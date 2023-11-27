@@ -8,7 +8,7 @@ import { Menuimg } from '../../Constant/constant';
 import { option } from '../../Constant/constant';
 import SortIcon from '@mui/icons-material/Sort';
 import RightSide from '../../Components/RightSide/RightSide';
-import Cards from './Cards';
+import Cards from './Cards/Cards';
 const Image = styled('img')({
   objectFit: 'cover'
 })
@@ -39,7 +39,7 @@ const Home = () => {
     <Container maxWidth={'md'}>
 
         <Carousel sx={{
-          width: { xs :330 - 600 , sm : 600-700 , md:700- 830 , lg:870}, 
+          width: { xs :330 - 600 , sm : 600-720 , md:721- 830 , lg:870}, 
           marginLeft: '0px', 
           height: '244px', 
           borderRadius: '5px', 
