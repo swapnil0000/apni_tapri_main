@@ -10,10 +10,13 @@ import Footer from "./Components/Footer/Footer";
 import Delivery from "./Screen/Delivery/Delivery";
 import Dining from "./Screen/Dining/Dining";
 import Pickup from "./Screen/Pickup/Pickup";
+import { Provider } from "react-redux";
+import store from "./store/store";
 function App() {
 
   return (
-   <BrowserRouter>
+    <Provider store={store}>
+    <BrowserRouter>
      <Header/>
      <Routes>
       <Route path="/" element={<Home/>}/>
@@ -28,6 +31,8 @@ function App() {
      <Drawer/>
      <Footer/>
    </BrowserRouter>
+   </Provider>
+
   );
 }
 

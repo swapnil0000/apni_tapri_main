@@ -12,7 +12,7 @@ import ShareIcon from '@mui/icons-material/Share';
 
 
 
-export default function Dialogs({id,image,name,price,open,handleClose}) {
+export default function Dialogs({image,name,price,open,handleClose}) {
   
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'));

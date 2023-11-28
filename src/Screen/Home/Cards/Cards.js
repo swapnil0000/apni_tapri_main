@@ -22,6 +22,8 @@ const handleClose = () => {
 
   return (
    <Box width="990px" sx={{borderRadius:'10px',boxShadow:'none'}}>
+
+   <Typography sx={{fontWeight:700,fontSize:'20px', margin:'10px'}}> Order Again</Typography>
     <Grid  container spacing={1} >
        {
         orderData.map((ele)=>(
