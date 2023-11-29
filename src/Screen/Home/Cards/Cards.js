@@ -27,7 +27,7 @@ const handleClose = () => {
     <Grid  container spacing={1} >
        {
         orderData.map((ele)=>(
-            <Grid key={ele.id} xs={6} sm={4} md={3} lg={3}>
+            <Grid key={ele.id} item xs={6} sm={4} md={3} >
             <Card sx={{ maxWidth: "250px", height:'250px', margin:'5px' }}>
             <CardActionArea>
               <CardMedia
@@ -43,7 +43,7 @@ const handleClose = () => {
             <Typography>{ele.price}</Typography>
           </Box>
          <Box sx={{marginTop:'10px'}}>
-          <Button  className='btn' variant='outlined'  onClick={handeOpen}>
+          <Button className='btn' variant='outlined'  onClick={handeOpen}>
            Add 
           </Button>
          </Box>

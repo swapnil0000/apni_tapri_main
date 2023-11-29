@@ -10,7 +10,7 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import { Link, Outlet } from 'react-router-dom';
 const RightSide = () => {
-    const Boxstyle=styled('Box')({
+    const BoxStyle=styled('Box')({
         width: '240px',
         height: '878px',
         marginTop:'20px', 
@@ -51,11 +51,11 @@ const RightSide = () => {
     })
   return (
     <Box sx={{backgroundColor:theme.palette.neutral.main}} >
-      <Boxstyle>
+      <BoxStyle>
       <TypographyStyle>
         Your Cart
       </TypographyStyle>
-      </Boxstyle>
+      </BoxStyle>
       <Box sx={{display:'flex', flexDirection:'row',gap:1.5}}>
       <Link style={{textDecoration:'none'}} to='/delivery'>
         <ButtonStyle>

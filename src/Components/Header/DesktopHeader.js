@@ -22,7 +22,7 @@ export default function DesktopHeader() {
 
     return (
         <>
-            <AppBar position='stick' sx={{ boxShadow: 'none' }}>
+            <AppBar position='sticky' sx={{ boxShadow: 'none' }}>
                 <Toolbar sx={{ backgroundColor: '#fff', display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
                     <img src={logo} alt='logo' />
                     <InputStlye disableUnderline placeholder='What would you like to eat'

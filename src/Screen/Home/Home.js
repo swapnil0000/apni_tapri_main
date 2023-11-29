@@ -8,6 +8,7 @@ import { Menuimg } from '../../Constant/constant';
 import { option } from '../../Constant/constant';
 import SortIcon from '@mui/icons-material/Sort';
 import RightSide from '../../Components/RightSide/RightSide';
+
 import Cards from './Cards/Cards';
 const Image = styled('img')({
   objectFit: 'cover'
@@ -40,23 +41,22 @@ const Home = () => {
 
         <Carousel sx={{
           width: { xs :330 - 600 , sm : 600-720 , md:721- 830 , lg:870}, 
-          marginLeft: '0px', 
           height: '244px', 
           borderRadius: '5px', 
           color: 'white',
-          marginTop:'10px'
+          marginTop:'10px',
+          direction:'rtl',
+        
           
         }}
-          swipe={true}
           draggable={true}
           infinite={true}
-          autoPlay={true}
           autoPlaySpeed={3000}
           keyBoardControl={true}>
           {carouselimage.map((ele) => (
-            <Box key={ele.id}>
+            <Box sx={{direction:'rtl'}}>
               <Image src={ele.image} alt='craousel' />
-            </Box>
+              </Box>
           ))}
         </Carousel>
 
@@ -75,7 +75,7 @@ const Home = () => {
           <Box sx={{ display: 'flex' ,fontSize:'10px'}}>
             {
               Menuimg.map((ele) => (
-                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <Box key={ele.id} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                   <MenuImage src={ele.image} alt={ele.name} />
                   <Typography sx={{ fontWeight: 400 }}>{ele.name}</Typography>
                 </Box>

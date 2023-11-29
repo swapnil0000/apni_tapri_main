@@ -88,7 +88,7 @@ const Drawers = () => {
             </Box>
             <List hidden={!open}>
                 {draw.map((ele) => (
-                    <Link style={{ textDecoration: 'none', color: 'black' }} to={ele.path} >
+                    <Link key={ele.id} style={{ textDecoration: 'none', color: 'black' }} to={ele.path} >
                         <ListItem key={ele.id} disablePadding sx={{ display: 'block' }}>
                             <ListItemButton
                                 sx={{

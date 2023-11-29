@@ -77,16 +77,19 @@ const Image = styled('img')({
 
 
 const Drawers = () => {
+
+    const [selectedItem, setSelectedItem] = useState(null);
+
+    const handleItemClick = (ele) => {
+        setSelectedItem(ele);
+      };
+    
+
+
     const [open, setOpen] = useState(false)
     const handleDrawerClose = () => {
         setOpen(!open);
     };
-    const [color,setColor]=useState("black")
-
-    const handleColour=()=>{
-        const orange=theme.palette.primary.main;
-        setColor(orange)
-    }   
     return (
         <>
         <DrawerStlye variant="permanent" open={open}>
@@ -110,26 +113,29 @@ const Drawers = () => {
             <List>
                 {draw.map((ele) => (
                     <Link style={{ textDecoration: 'none' ,color:'black' , fontFamily:'Lato' }} to={ele.path} >
-                        <ListItem key={ele.id} disablePadding sx={{ display: 'block',fontFamily:'Lato' }}>
+                        <ListItem key={ele.id} disablePadding sx={{ display: 'block',fontFamily:'Lato', color: selectedItem === ele ? 'red' : 'black', }}>
                             <ListItemButton
                                 sx={{
                                     minHeight: 48,
+                                    cursor:'pointer',
                                     justifyContent: open ? 'initial' : 'center',
                                     px: 2.5,
                                 }}
                             >
                                 <ListItemIcon
+                                onClick={()=>handleItemClick(ele)}
                                     sx={{
+                                        color: selectedItem === ele ?theme.palette.primary.main : 'grey',
                                         minWidth: 0,
                                         mr: open ? 3 : 'auto',
                                         justifyContent: 'center',
                                         
                                     }}
-                                    onClick={handleColour}
                                 >
                                     {ele.value}
                                 </ListItemIcon>
-                                <ListItemText  primary={ele.name} sx={{ opacity: open ? 1 : 0 }} />
+                                <ListItemText  primary={ele.name} sx={{ opacity: open ? 1 : 0,
+                                    color: selectedItem === ele ? theme.palette.primary.main : 'black', }} />
                             </ListItemButton>
                         </ListItem>
                     </Link>
